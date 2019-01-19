@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Basic Website</title>
+	<link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.css">
+	<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="product_style.css">
+
+</head>
+
+<body>
+
+<div class="headersection templete clear">
+
+	<div class="logo">
+		<img src="images/logo.png" alt="Logo"/>
+		<h2>Website Titel</h2>
+		<p>Our Website Description</p>
+	</div>
+
+	<div class="social">
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="http://www.google.com" target="_blank"><i class="fa fa-google-plus"></i></a>
+	</div>
+</div>
+
+<div class="navsection templete">
+	<ul>
+		<li><a id="active" href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="product.html">Product</a>
+			<ul>
+				<li><a href="index_component.html">Vue.js Product 1</a></li>
+				<li><a href="#">Product 2</a></li>
+				<li><a href="#">Product 3</a></li>
+				<li><a href="#">Product 4</a></li>
+				<li><a href="#">Product 5</a></li>
+			</ul>
+		</li>
+		<li><a href="about.html">Privacy</a></li>
+		<li><a href="contact.html">Contact</a>
+			<ul>
+				<li><a href="#">Address One</a></li>
+				<li><a href="#">Address Two</a></li>
+				<li><a href="#">Address Three</a></li>
+				<li><a href="#">Address Four</a></li>
+				<li><a href="#">Address Five</a></li>
+			</ul>
+		</li>
+		<li><a href="item.html">Item</a></li>
+	</ul>
+</div>
+
+<!-- <div class="nav-bar"></div> -->
+
+<div id="app">
+	<div class="cart">
+		<p>Cart({{cart.length}})</p>
+	</div>
+
+	<product :premium="premium" @add-to-cart-event="updateCart" @remove-from-cart-event="decrCart"></product>
+
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="main_component.js"></script>
+
+</body>
+</html>
