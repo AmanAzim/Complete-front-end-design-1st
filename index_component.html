@@ -30,11 +30,11 @@
 
 <div class="navsection templete">
 	<ul>
-		<li><a id="active" href="index.html">Home</a></li>
+		<li><a href="index.html">Home</a></li>
 		<li><a href="about.html">About</a></li>
-		<li><a href="product.html">Product</a>
+		<li><a id="active" href="product.html">Product</a>
 			<ul>
-				<li><a href="index_component.html">Vue.js Product 1</a></li>
+				<li><a id="active" href="index_component.html">Vue.js Product 1</a></li>
 				<li><a href="#">Product 2</a></li>
 				<li><a href="#">Product 3</a></li>
 				<li><a href="#">Product 4</a></li>
@@ -56,18 +56,39 @@
 
 <!-- <div class="nav-bar"></div> -->
 
-<div id="app">
-	<div class="cart">
-		<p>Cart({{cart.length}})</p>
+<div class="contentsection contemplete clear">
+	<div>
+     <div id="app">
+    	<div class="cart">
+	    	<p>Cart({{cart.length}})</p>
+		</div>
+
+	    <product :premium="premium" @add-to-cart-event="updateCart" @remove-from-cart-event="decrCart"></product>
+      </div>
 	</div>
-
-	<product :premium="premium" @add-to-cart-event="updateCart" @remove-from-cart-event="decrCart"></product>
-
 </div>
 
  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 <script src="main_component.js"></script>
+
+<div class="footersection templete clear">
+	<div class="footermenu clear">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+
+	<p>&copy; Copy right Training with live project.</p>
+</div>
+<div class="fixedicon clear">
+	<a href="#"><img src="images/fb.png" alt="Facebok"/></a>
+	<a href="#"><img src="images/ld.png" alt="LinkdIn"/></a>
+	<a href="#"><img src="images/tw.png" alt="Twitter"/></a>
+	<a href="http://www.youtube.com"><img src="images/yt.png" alt="Youtube"/></a>
+</div>
 
 </body>
 </html>

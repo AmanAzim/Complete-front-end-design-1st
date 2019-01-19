@@ -12,8 +12,10 @@ props:
 template:`
 	<div class="product">
 	
-		<div class="product-image">
-			<img :src="image">
+		<div class="product-image ">
+			<div class="img-border">
+				<img :src="image">
+			</div>
 		</div>
 		
 		<div class="product-info">
